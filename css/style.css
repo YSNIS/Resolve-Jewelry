@@ -1150,9 +1150,9 @@ select.quantity, .item_sets, .item_style, select.item_length, select.item_color,
     
   }
   .story-picture {
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 84%;
+    margin-left: 8%;
+    
   }
   .story-picture img {
     margin: 0;
