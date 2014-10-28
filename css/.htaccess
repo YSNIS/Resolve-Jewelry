@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^resolvejewelry\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.resolvejewelry\.com$
+RewriteRule ^/?$ "https\:\/\/www\.etsy\.com\/shop\/resolvejewelry" [R=301,L]
+
+RewriteRule ^shop/$ /shop/index.php 
+RewriteRule ^shop/(.*)/$ /shop/item.php?name=$1
+RewriteRule ^$ /collections/index.php
+
+
+

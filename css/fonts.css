@@ -1,0 +1,47 @@
+/*
+TO CHANGE FONTS TO AVENIR
+GO TO STYLES.CSS AND DO CTRL+F AND TYPE
+FONT-FAMILY.  THEN CHANGE FONT-FAMILY TO AVENIR
+*/
+
+@font-face {
+  font-family: "figcaption";
+  src: url("../fonts/Lora-Regular.ttf");
+ }
+ @font-face {
+  font-family: "Navigation";
+  src: url("../fonts/Lora-Regular.ttf");
+ }
+ @font-face {
+  font-family: "Collections";
+  src: url("../fonts/Lora-Regular.ttf");
+ }
+ @font-face {
+  font-family: "Filter Options";
+  src: url("/fonts/Roboto-regular.ttf");
+}
+@font-face {
+  font-family: "Item Info";
+  src: url("../fonts/Lora-Regular.ttf");
+}
+@font-face {
+  font-family: "Story Text";
+  src: url("../fonts/droidsans.ttf");
+}
+@font-face {
+  font-family: "Stockists";
+  src: url("../fonts/droidsans.ttf");
+}
+@font-face {
+  font-family: "Footer Links";
+  src: url("../fonts/Lora-Regular.ttf");
+}
+@font-face {
+  font-family: "Copyright";
+  src: url("../fonts/Lora-Regular.ttf");
+}
+@font-face {
+  font-family: "cartstuff";
+  src: url("../fonts/raleway-regular.ttf");
+}
+

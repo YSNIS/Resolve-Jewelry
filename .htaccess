@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^shop/$ /shop/index.php 
+RewriteRule ^shop/(.*)/$ /shop/item.php?name=$1
+RewriteRule ^$ /collections/index.php
