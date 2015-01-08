@@ -79,6 +79,7 @@ function get_products_for_filter_list()
     	} else {
     		$polymerClay = " ";
     	}
+        $cost = " " . $product[price] . " ";
         $price = "<p><span class='dollar'>$</span>" . $product[price];
         if ($product[quantity] == 0) {
             $price = "<p>Sold Out";
@@ -97,7 +98,7 @@ function get_products_for_filter_list()
     	$bead .
     	$polymerClay .
     	$product[name] .
-    	'"><a href="'. BASE_URL .'shop/' . $product[name] .'/"><figure class="effect-zoe"><img src="' . BASE_URL . $product[img] . '/1.jpg" alt="Jewelry">
+    	'" data-value="' . $product[price] . '"><a href="'. BASE_URL .'shop/' . $product[name] .'/"><figure class="effect-zoe"><img src="' . BASE_URL . $product[img] . '/1.jpg" alt="Jewelry">
         <figcaption><h2>' . $product[name] . '</h2>' . $price . '</p></figcaption></figure></a></div>';
     }
     
@@ -207,7 +208,25 @@ function get_item_named($name)
 
     $product["sets"] = $sets->fetchAll(PDO::FETCH_ASSOC);
 
-    // Get set
+    // Get materials
+    try 
+    {
+        $materials = $db->query('
+               SELECT materials, cost from product_materials 
+               INNER JOIN materials ON materials.id = product_materials.materials_id 
+               WHERE sku = ' . $product["sku"] . ';');
+    }
+    catch (Exception $e) 
+    {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product["materials"] = $materials->fetchAll(PDO::FETCH_ASSOC);
+
+    
+
+    // Get extras
     try 
     {
         $extras = $db->query('

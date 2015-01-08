@@ -44,4 +44,12 @@ FONT-FAMILY.  THEN CHANGE FONT-FAMILY TO AVENIR
   font-family: "cartstuff";
   src: url("../fonts/raleway-regular.ttf");
 }
+@font-face {
+  font-family: "headliner";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "newnav";
+  src: url("../fonts/BreeSerif-Regular.ttf");
+}
 

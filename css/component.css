@@ -990,12 +990,13 @@ figure.effect-zoe figcaption > span {
 }
 
 figure.effect-zoe p {
-	bottom: 7.2em;
+	bottom: 6em;
 	right: 15px;
 	padding: 2em;
 	color: #fff;
 	text-transform: none;
 	/*font-size: 90%;*/
+	/*YO THIS IS THE SHOP PRICE FONT*/
 	font-family: "Cartstuff";
 	opacity: 0;
 	-webkit-transition: opacity 0.35s;
@@ -1003,7 +1004,10 @@ figure.effect-zoe p {
 	position: absolute;
 }
 
-figure.effect-zoe h2,
+figure.effect-zoe h2 {
+	/*YO THIS IS THE SHOP NAME FONT*/
+	font-family: "Cartstuff";
+}
 figure.effect-zoe figcaption > span {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;

@@ -8,12 +8,33 @@
 				</div>
 
 				<div class="footer-info">
-					<a href="<?php echo BASE_URL; ?>custom/"><p class="bot-border">Custom Work</p></a>
+					<a href="<?php echo BASE_URL; ?>stockists/"><p class="bot-border">Stockists</p></a>
 					<a href="<?php echo BASE_URL; ?>care/"><p class="bot-border">Jewelry Care</p></a>
 					<a href="<?php echo BASE_URL; ?>exchanges/"><p class="bot-border">Exchanges</p></a>
 					<a href="<?php echo BASE_URL; ?>shipments/"><p class="bot-border">Shipments</p></a>
 					<a href="<?php echo BASE_URL; ?>thanks/"><p>Thank you</p></a>
 				</div>
+
+				<!-- Begin MailChimp Signup Form -->
+				<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:400px;}
+					/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+					   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+				</style>
+				<div id="mc_embed_signup">
+				<form action="//resolvejewelry.us9.list-manage.com/subscribe/post?u=368b1120ddf659ebd6ef871ff&amp;id=181e3d5749" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				    <div id="mc_embed_signup_scroll">
+					
+					<input style="text-align:center" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address for promos and coupons" required>
+				    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_368b1120ddf659ebd6ef871ff_181e3d5749" tabindex="-1" value=""></div>
+				    <div class="clear"><input style="font-size:10px" type="submit" value="SIGN UP" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+				    </div>
+				</form>
+				</div>
+
+				<!--End mc_embed_signup-->
 
 				<div id="copyright">
 					<p>&copy;<?php echo date("Y"); ?> Resolve Jewelry</p>
@@ -90,6 +111,8 @@
     <!-- Filter for shop -->
     <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/shop-filter.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/buffer.js"></script>
+
+
     <!-- <script type="text/javascript" src="<?php //echo BASE_URL; ?>scripts/lightbox.js"></script> -->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.5/minicart.min.js"></script> -->
     	<script>
@@ -107,7 +130,23 @@
     	</script>
 
 
-
+    	<!-- Start of StatCounter Code for Default Guide -->
+    	<script type="text/javascript">
+    	var sc_project=10185660; 
+    	var sc_invisible=1; 
+    	var sc_security="3fdfe35f"; 
+    	var scJsHost = (("https:" == document.location.protocol) ?
+    	"https://secure." : "http://www.");
+    	document.write("<sc"+"ript type='text/javascript' src='" +
+    	scJsHost+
+    	"statcounter.com/counter/counter.js'></"+"script>");
+    	</script>
+    	<noscript><div class="statcounter"><a title="web stats"
+    	href="http://statcounter.com/" target="_blank"><img
+    	class="statcounter"
+    	src="http://c.statcounter.com/10185660/0/3fdfe35f/1/"
+    	alt="web stats"></a></div></noscript>
+    	<!-- End of StatCounter Code for Default Guide -->
 	</body>
 
 </html>	

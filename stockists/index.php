@@ -102,7 +102,7 @@
 
 
     <div id="contact-form">
-    <h4 class="stockist-form-title">Think Resolve would be a great fit for your shop?  Please fill out the form and I'll contact you with more information. </h4>
+    <p>Think Resolve would be a great fit for your shop?  Please fill out the form and I'll contact you with more information. </p>
     <?php if (isset($_GET["status"]) AND $_GET["status"] == "thanks") { ?>
         <p>We'll talk soon!</p>
     <?php } else { ?>

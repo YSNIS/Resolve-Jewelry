@@ -7,10 +7,13 @@
 	// 	header('Location: ' . BASE_URL . 'shop/');
 	// 	exit();
 	// }
-	$pageTitle = "Resolve Jewelery";
+	$pageTitle = "Resolve Jewelry";
 	$section = "shop";
 	
 	include (ROOT_PATH . "inc/header.php");
+
+		// echo var_dump($item);
+
 
 ?>
 	<div class="item-wrapper">
@@ -142,6 +145,25 @@
 			}
 		?>
 		<?php 
+			if($item["materials"] != null)
+			{
+		?>
+				<input type="hidden" name="on<?php echo $num; ?>" value="Material"><h3 class="input_name">Material</h3><div class="dropdown dropdown_material"><div class="material_select"></div><select class="item_material" name="os<?php echo $num; ?>">
+					<?php
+						echo '<option value="base" material_price="0">Base</option>';
+						for ($i = 0; $i < count($item["materials"]); $i++)
+						{
+							echo '<option value="' . $item["materials"][$i]["materials"] . '" material_price="' .  $item["materials"][$i]["cost"]  . '">' .  $item["materials"][$i]["materials"] ." ($" . $item["materials"][$i]["cost"] . ')</option>';
+						}
+					?>
+				</select>
+				<span class="sexydrop"></span>
+				</div>
+		<?php 
+				$num++; 
+			}
+		?>
+		<?php 
 			
 			if($item["sets"] != null)
 			{
@@ -213,5 +235,10 @@
 		  $('.soldout').show();
 		</script>
 	<?php } ?>
+	<span class='st_fblike_large' displayText='Facebook Like'></span>
+	<span class='st_facebook_large' displayText='Facebook'></span>
+	<span class='st_twitter_large' displayText='Tweet'></span>
+	<span class='st_pinterest_large' displayText='Pinterest'></span>
+	<span class='st_email_large' displayText='Email'></span>
 
 <?php include (ROOT_PATH . "inc/footer.php"); ?>

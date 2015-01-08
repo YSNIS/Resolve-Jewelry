@@ -21,12 +21,21 @@ $('.dropdown_style').change(function(){
 	$('.size_select').text($(".item_size option:selected").text());
 	// alert();
 });
+$('.dropdown_style').change(function(){
+	$('.material_select').text($(".item_material option:selected").text());
+	// alert();
+});
 $('.dropdown_quantity').change(function(){
 	$('.quantity_select').text($(".quantity option:selected").text());
 	// alert();
 });
 $('.dropdown_sets').change(function(){
 	$('.sets_select').text($(".item_sets option:selected").text());
+	UpdateAmount();
+	// alert();
+});
+$('.dropdown_material').change(function(){
+	$('.material_select').text($(".item_material option:selected").text());
 	UpdateAmount();
 	// alert();
 });
@@ -44,6 +53,7 @@ $('.extra').change(function(){
 
 });
 
+
 $( document ).ready(function (){
 	$('.style_select').text($(".item_style option:selected").text());
 	$('.length_select').text($(".item_length option:selected").text());
@@ -51,6 +61,14 @@ $( document ).ready(function (){
 	$('.size_select').text($(".item_size option:selected").text());
 	$('.quantity_select').text($(".quantity option:selected").text());
 	$('.sets_select').text($(".item_sets option:selected").text());	
+	$('.material_select').text($(".item_material option:selected").text());	
+});
+
+//Change size of text for sign up when on mobile 
+$( document ).ready(function () {
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$("#mc-embedded-subscribe").css("font-size", "24");
+	}
 });
 
 $(".quantity").change(function(){
@@ -59,22 +77,39 @@ $(".quantity").change(function(){
 });
 
 var UpdateAmount = function() {
-	var price = 0;
+	//Get original price
+	var price = parseInt($(".item-price").attr("original"));
+	console.log(price);
+
+	//if part of a set - change the base price
+	if ($(".item_sets").length == 1) {
+		console.log("Changing Sets");
+		price = parseInt($(".item_sets option:selected").attr("price"));
+	}
+	
+	// Add Extras
 	$('.extra').each(function(){
+		console.log("Changing Extras");
 		if ($(this).is(":checked")) {
 			price = price + parseInt($(this).attr("price"));
 		}
 	});
-	if ($(".item_sets").length == 1) {
-		$("#priceofitem").val(parseInt($(".item_sets option:selected").attr("price"))+price);
-		$(".item-price").text(parseInt($(".item_sets option:selected").attr("price"))+price+".00");
-		$(".item-price").text("$"+$(".item-price").text());
+
+	// Add additional materials cost
+	if ($(".item_material").length == 1) {
+		console.log("Changing Material");
+		price += parseInt($(".item_material option:selected").attr("material_price"));
+		
 	}
-	else {
-		$("#priceofitem").val(price+parseInt($(".item-price").attr("original")));
-		$(".item-price").text(price+parseInt($(".item-price").attr("original")));
-		$(".item-price").text("$"+$(".item-price").text()+".00");	
-	}
+
+	// Add final price
+	var newPrice = price;
+	$("#priceofitem").val(newPrice);
+	$(".item-price").text(newPrice);
+	$(".item-price").text("$"+$(".item-price").text()+".00");
+
+
+
 }
 
 // $(".extra").change(function(){

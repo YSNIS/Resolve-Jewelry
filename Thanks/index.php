@@ -8,7 +8,7 @@
 <!-- Jake -->
 <div class="thankyou">
 	<div class="thankyou-picture">
-		<img src="<?php echo BASE_URL; ?>images/thanks/jake3.jpeg">
+		<img src="<?php echo BASE_URL; ?>images/thanks/jake3.jpg">
 	</div>
 	<div class="thankyou-text">
 		<h2>Web Design</h2>
